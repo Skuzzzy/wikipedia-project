@@ -11,7 +11,7 @@ class FirstLinkFinder
 		{
 			String currentFileName = fileNamesGetter.nextLine();
 			File currentFile = new File(currentFileName);
-			FileReader infoGetter = new FileReader(currentFile);
+			FirstLinkReader infoGetter = new FirstLinkReader(currentFile);
 
 			infoGetter.search();
 		}
