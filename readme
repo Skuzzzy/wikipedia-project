@@ -7,6 +7,15 @@ Then used http://medialab.di.unipi.it/wiki/Wikipedia_Extractor I changed one con
 Then I wrote a python script to get all the names of the wiki files the extractor produced
 % python getFiles.py > wikiFileNamesPythonOutput.txt
 
-Then used java to get the first link from the list of files I generated
+Then I used java to get the first link from the list of files I generated
 % javac FirstLinkFinder.java FirstLinkReader.java
 % java FirstLinkFinder > linkPairList.txt
+
+I use glogg to view the output file as it is a little over 4.4 million lines in length
+I can't upload the output file to github due to its size
+
+Then I made made another java program to sort the output into 27 files, one for each letter of the alphabet as well as an other for any numbers of other characters
+% javac SortRaw.java 
+% java SortRaw
+This creates a directory called sortedOutPut and fills it with these 27 files
+I beleive this will make it easier when searching for individual articles
