@@ -7,9 +7,6 @@ Then used http://medialab.di.unipi.it/wiki/Wikipedia_Extractor I changed one con
 Then I wrote a python script to get all the names of the wiki files the extractor produced
 % python getFiles.py > wikiFileNamesPythonOutput.txt
 
-
-
-
-
-
-
+Then used java to get the first link from the list of files I generated
+% javac FirstLinkFinder.java FirstLinkReader.java
+% java FirstLinkFinder > linkPairList.txt
