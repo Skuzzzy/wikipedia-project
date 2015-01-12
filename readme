@@ -1,4 +1,5 @@
-Downloaded enwiki-latest-pages-articles.xml.bz2 from http://meta.wikimedia.org/wiki/Data_dumps
+Downloaded enwiki-latest-pages-articles.xml.bz2 from http://meta.wikimedia.org/wiki/Data_dumps/
+http://dumps.wikimedia.org/enwiki/ (2014-Dec-21 22:00:57) 
 
 Then used http://medialab.di.unipi.it/wiki/Wikipedia_Extractor I changed one condition of the script so that links were preserved during the extraction
 % bzcat enwiki-latest-pages-articles.xml.bz2 | python WikiExtractor.py -o extracted-with-links
