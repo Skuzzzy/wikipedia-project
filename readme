@@ -19,3 +19,9 @@ Then I made made another java program to sort the output into 27 files, one for 
 % java SortRaw
 This creates a directory called sortedOutPut and fills it with these 27 files
 I beleive this will make it easier when searching for individual articles
+
+Now for the more exciting part. I created Toy.java that takes 2 arguments, the number of articles you want to search through, as well as the intial article that you want to start the search at.
+% javac Toy.java
+% java Toy [NUM_ARTICLES_TO_CHECK] [INITIAL_ARTICLE]
+This will recusively print the first link for each article unles it cannot find the next article listed
+There is a large issue where I do not have a table of wikipedia redirects that the articles use which causes the search to fail for some links.

@@ -5,7 +5,9 @@ class Toy
 {
 	public static void main(String[] args)
 	{
-		System.out.println(link(args[0]));
+		//System.out.println(link(args[0]));
+		System.out.println(getLinkNDeep(Integer.parseInt(args[0]),args[1]));
+
 	}
 
 	public static String link(String article)
@@ -33,7 +35,7 @@ class Toy
 
 	public static String getLineWithArticle(File containingFile, String article) throws IOException
 	{
-		System.out.println("Searching " + containingFile.toString() + "  ...");
+		//System.out.println("Searching " + containingFile.toString() + "  ...");
 		Scanner lineGetter = new Scanner(containingFile);
 		while(lineGetter.hasNextLine())
 		{
@@ -58,4 +60,17 @@ class Toy
 
 		return articleLine.substring(start,end);
 	}
+
+	public static String getLinkNDeep(int n, String article)
+	{
+		String link = link(article);
+		System.out.println(link);
+		if(n == 1)
+		{
+			return link(link); 
+		}else{
+			return getLinkNDeep(--n,link);
+		}	
+	}
+
 }
